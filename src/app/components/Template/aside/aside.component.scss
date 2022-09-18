@@ -1,8 +1,10 @@
 @import "../../../../scss/variables";
 
 aside {
-    position: relative;
+    z-index: 1;
+    position: fixed;
     transition: all 0.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;;
 }
 
 .overflow-child {
@@ -64,12 +66,15 @@ aside {
           
         .menu-link {
             text-decoration: none;
-            color: $gray;
+            color: $secondary;
             i {
                 padding-left: 20px;
                 margin-right: 20px;
                 font-size: 23px;
             }
+        }
+        .menu-link-text{
+            color:$secondary;
         }
         &:hover {
             cursor: pointer;

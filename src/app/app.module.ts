@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AsideComponent } from './components/Template/aside/aside.component';
-import { HeaderComponent } from './components/Template/header/header.component'; 
+import { HeaderComponent } from './components/Template/header/header.component';
+import { HomeComponent } from './components/home/home.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     AsideComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

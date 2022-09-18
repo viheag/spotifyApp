@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  username!:string
   constructor() { }
 
   ngOnInit(): void {
+    this.username="Vianey"
   }
 
 }
