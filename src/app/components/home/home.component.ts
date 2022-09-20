@@ -8,9 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HomeComponent implements OnInit {
   button!: any;
-  constructor(private authservice: AuthService) {
-    
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 }
