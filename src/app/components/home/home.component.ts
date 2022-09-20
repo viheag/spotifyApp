@@ -4,21 +4,13 @@ import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-
-  constructor(
-    private authservice: AuthService
-  ) { }
-
-  ngOnInit(): void {
-    this.authservice.loginGoogle().subscribe((response)=>{
-      console.log(response)
-    },
-    (error)=>{
-      console.log("Error", error)
-    })
+  button!: any;
+  constructor(private authservice: AuthService) {
+    
   }
 
+  ngOnInit(): void {}
 }
