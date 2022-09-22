@@ -9,14 +9,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AsideComponent } from './components/Template/aside/aside.component';
 import { HeaderComponent } from './components/Template/header/header.component';
-import { HomeComponent } from './components/home/home.component'; 
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     AsideComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
