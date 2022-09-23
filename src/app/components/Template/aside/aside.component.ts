@@ -13,8 +13,7 @@ export class AsideComponent implements OnInit {
 
   ngOnInit(): void {}
   onclickSideBar() {
-    this.showSideBar = !this.showSideBar;
-    console.log("sidebar",this.showSideBar)
+    this.showSideBar = !this.showSideBar; 
     this.stateSideBar.emit(this.showSideBar);
   }
 }

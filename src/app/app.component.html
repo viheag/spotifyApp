@@ -1,7 +1,6 @@
-<app-aside *ngIf="currentUser" (stateSideBar)="onclickSideBar($event)"></app-aside>
-
-<main [ngClass]="currentUser ? stateSideBar ? 'min-width' : 'min-width' : 'min-width'"
-  [style.width]="'calc(100% - ' + (currentUser ? stateSideBar : '115px' ? '115px' : '240px' ) + ')'">
+<app-aside *ngIf="currentUser" (stateSideBar)="onclickSideBar($event)"></app-aside> 
+<main [ngClass]="currentUser ? stateSideBar ? 'full-width' : 'min-width' : 'min-width'"
+  [style.width]="'calc(100% - ' + (currentUser ? stateSideBar : '240px' ? '240px' : '115px' ) + ')'">
   <app-header *ngIf="currentUser"></app-header>
   <section class="section dashboard">
     <div class="row">

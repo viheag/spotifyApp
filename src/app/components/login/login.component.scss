@@ -1,10 +1,20 @@
 @import "../../../scss/variables"; 
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,600;0,700;0,800;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 button{
     background-color:$primary;
     text-decoration: none;
     a{
         color:$white;
-        text-decoration: none;
+        text-decoration: none;  
     }
+}
+.title-app{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    font-size: 160px; 
+}
+p{
+    font-family: 'Poppins';
+    font-weight: 400;
 }
