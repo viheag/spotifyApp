@@ -1,20 +1,20 @@
 <aside [className]="showSideBar ? 'full-width' : 'min-width'">
   <div class="overflow-child">
     <div class="site-brand">
-      <a href="index.html" class="site-brand-link">
+      <a href="javascript:void(0);" class="site-brand-link">
         <span class="site-brand-logo">
           <i class="bi bi-heart"></i>
         </span>
         <span class="site-brand-text ms-4">Appify</span>
       </a>
-      <a href="javascript:void(0);" (click)="onclickSideBar()" [className]="showSideBar ? 'full-width-button layout-menu-toggle menu-link text-large ms-auto' : 'min-width-button layout-menu-toggle menu-link text-large ms-auto'">
+      <a (click)="onclickSideBar()" [className]="showSideBar ? 'full-width-button layout-menu-toggle menu-link text-large ms-auto' : 'min-width-button layout-menu-toggle menu-link text-large ms-auto'">
         <i class="bi bi-chevron-left"></i>
       </a>
     </div>
 
     <ul class="menu-inner"> 
       <li class="menu-item active">
-        <a href="index.html" class="menu-link">
+        <a href="javascript:void(0);" [routerLink]="'/home'" class="menu-link">
           <i class="bi bi-house"></i> <span class="menu-link-text">Dashboard</span>
         </a>
       </li> 

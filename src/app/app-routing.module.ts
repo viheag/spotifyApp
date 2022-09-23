@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '/home' },
   {
     path: 'login',
     component: LoginComponent,
@@ -11,6 +12,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    data: {animation: 'Home'}
   },
 ];
 

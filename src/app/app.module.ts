@@ -9,8 +9,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AsideComponent } from './components/Template/aside/aside.component';
 import { HeaderComponent } from './components/Template/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { LoginComponent } from './components/login/login.component'; 
-
+import { LoginComponent } from './components/login/login.component';  
+import { LottieModule } from 'ngx-lottie';
+import player from 'lottie-web'; 
+export function playerFactory() {
+  return player;
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,8 @@ import { LoginComponent } from './components/login/login.component';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    HttpClientModule, 
+    HttpClientModule,
+    LottieModule.forRoot({ player: playerFactory }),  
   ],
   providers: [],
   bootstrap: [AppComponent]
