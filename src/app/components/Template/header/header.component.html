@@ -5,6 +5,7 @@
         Bienvenido, <span>{{currentSession.display_name}}</span>!
       </div>
       <div class="col-sm profile">
+        <a class="cerrarSesion" (click)="cerrarSesion()">Cerrar sesión </a> 
         <img src="{{currentSession.images[0].url}}" alt="user profile picture" />
       </div>
     </div>

@@ -50,6 +50,7 @@ export class AuthService {
 
   removeCurrentSession(): void {
     this.localStorageService.removeItem(sesionActual);
+    /*this.localStorageService.removeItem('SesionActual')*/
     this.localStorageService.clear();
     this.currentUserSubject.next(null);
   }
