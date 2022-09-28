@@ -1,20 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { DashboardBlockComponent } from './dashboard-block.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
-  
+describe('DashboardBlockComponent', () => {
+  let component: DashboardBlockComponent;
+  let fixture: ComponentFixture<DashboardBlockComponent>;
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ DashboardBlockComponent ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(DashboardBlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

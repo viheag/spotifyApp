@@ -15,8 +15,7 @@ export class AppComponent {
   constructor(private authService: AuthService) {
     this.authService.currentSession.subscribe((x) => {
       this.currentUser = x;
-    });
-    console.log(this.stateSideBar);
+    }); 
   }
   onclickSideBar($event: boolean) {
     this.stateSideBar = $event; 

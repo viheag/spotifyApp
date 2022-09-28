@@ -11,7 +11,11 @@ import { HeaderComponent } from './components/Template/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';  
 import { LottieModule } from 'ngx-lottie';
-import player from 'lottie-web'; 
+import player from 'lottie-web';
+import { DashboardBlockComponent } from './components/Template/dashboard-block/dashboard-block.component';
+import { ArtistasComponent } from './components/artistas/artistas.component';
+import { PlaylistsComponent } from './components/playlists/playlists.component';
+import { CancionesComponent } from './components/canciones/canciones.component'; 
 export function playerFactory() {
   return player;
 }
@@ -21,7 +25,11 @@ export function playerFactory() {
     AsideComponent,
     HeaderComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardBlockComponent,
+    ArtistasComponent,
+    PlaylistsComponent,
+    CancionesComponent
   ],
   imports: [
     BrowserModule,

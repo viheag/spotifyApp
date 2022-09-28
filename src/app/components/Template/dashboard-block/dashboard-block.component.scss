@@ -1,0 +1,78 @@
+@import "../../../../scss/variables";
+
+.icon-img {
+  width: 100px;
+  margin-bottom: 25px;
+}
+
+.stay-in-place {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+a{
+  margin-top:1rem;
+  text-decoration: none;
+  color:$primary;
+  &:hover{
+    color:$gray;
+  }
+}
+.title{
+  color: $secondary;
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+.move-in-to-place {
+  position: absolute;
+  bottom: -100%;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  opacity: 0;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.box {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+
+  &:hover .move-in-to-place {
+    font-size: 18px;
+    text-align: center;
+    bottom: 0;
+    -webkit-transition: all 0.4s, -webkit-transform 0.4s;
+    transition: all 0.4s, transform 0.4s;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  &:not(hover) .move-in-to-place {
+    bottom: -100%;
+    -webkit-transition: all 1s, -webkit-transform 1s;
+    transition: all 1s, transform 1s;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+  }
+
+  &:hover .stay-in-place {
+    bottom: -100%;
+    -webkit-transition: all 1s, -webkit-transform 1s;
+    transition: all 1s, transform 1s;
+    width: 100%;
+    height: 0;
+  }
+
+  &:not(hover) .stay-in-place {
+    bottom: 0;
+    -webkit-transition: all 0.4s, -webkit-transform 0.4s;
+    transition: all 0.4s, transform 0.4s;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+}

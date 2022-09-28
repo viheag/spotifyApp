@@ -1,5 +1,7 @@
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Home</h5> 
-  </div>
-</div>
+ <div class="row">
+   <ng-container *ngFor="let block of arrayBlocks">
+     <app-dashboard-block class="col-lg col-md" [title]="block.title" [img]="block.imagePath"
+       [description]="block.description" [link]="block.link">
+     </app-dashboard-block>
+   </ng-container>
+ </div>
