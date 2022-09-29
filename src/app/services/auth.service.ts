@@ -23,6 +23,14 @@ export class AuthService {
     );
   }
 
+  getToptracks(): Observable<any>{
+    return this.http.get<any>(
+      `${environment.urlAPI}/getTopTracks`, {
+        withCredentials: true,
+      }
+    );
+  }
+
   private currentUserSubject: BehaviorSubject<any>;
   public currentSession: Observable<any>;
   constructor(private router: Router, private http: HttpClient) {

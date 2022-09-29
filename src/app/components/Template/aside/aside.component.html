@@ -19,8 +19,18 @@
         </a>
       </li> 
       <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="bi bi-star"></i> <span class="menu-link-text">Options</span>
+        <a href="javascript:void(0);"[routerLink]="'/playlists'" class="menu-link menu-toggle">
+          <i class="bi bi-music-note-list"></i> <span class="menu-link-text">Playlist</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="javascript:void(0);" [routerLink]="'/canciones'" class="menu-link menu-toggle">
+          <i class="bi bi-file-earmark-music"></i> <span class="menu-link-text">Canciones</span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="javascript:void(0);" [routerLink]="'/artistas'" class="menu-link menu-toggle">
+          <i class="bi bi-person-lines-fill"></i> <span class="menu-link-text">Artistas</span>
         </a>
       </li>
     </ul>
