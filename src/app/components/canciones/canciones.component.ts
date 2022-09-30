@@ -11,7 +11,15 @@ export class CancionesComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.authService.getToptracks().subscribe((response)=>{
+    this.authService.getToptracks('short_term').subscribe((response)=>{
+      this.canciones=response.items;
+      console.log(this.canciones);
+    },(error)=>{
+      console.log("Error",error)
+    })
+  }
+  cambiarInfo(term:any){
+    this.authService.getToptracks(term).subscribe((response)=>{
       this.canciones=response.items;
       console.log(this.canciones);
     },(error)=>{

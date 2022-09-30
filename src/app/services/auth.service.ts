@@ -9,26 +9,24 @@ const sesionActual = 'SesionActual';
 const authToken = 'authAccessToken';
 const authRefresh = 'authRefreshToken';
 
-
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService { 
+export class AuthService {
   localStorageService;
   getAccount(): Observable<any> {
-    return this.http.get<any>(
-      `${environment.urlAPI}/account`, {
-        withCredentials: true,
-      }
-    );
+    return this.http.get<any>(`${environment.urlAPI}/account`, {
+      withCredentials: true,
+    });
   }
 
-  getToptracks(): Observable<any>{
-    return this.http.get<any>(
-      `${environment.urlAPI}/getTopTracks`, {
-        withCredentials: true,
+  getToptracks(term: any): Observable<any> {
+    return this.http.get<any>(`${environment.urlAPI}/getTopTracks`, {
+      withCredentials: true,
+      params:{
+        type_term:term
       }
-    );
+    });
   }
 
   private currentUserSubject: BehaviorSubject<any>;
@@ -64,17 +62,17 @@ export class AuthService {
   }
 
   //save Roles
-  getRoles():any{
+  getRoles(): any {
     var session: any = this.getCurrentSession();
     return session && session.user ? session.user.roles : null;
-  }  
+  }
 
   //obtener el usuario actual
   getCurrentUser(): any {
     var session: any = this.getCurrentSession();
     return session && session.user ? session.user : null;
   }
-  
+
   getCurrentIdUser(): any {
     var session: any = this.getCurrentSession();
     return session && session.user ? session.user._id : null;
@@ -120,5 +118,4 @@ export class AuthService {
     this.removeCurrentSession();
     this.router.navigate(['/login']);
   }
-
 }

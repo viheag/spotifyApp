@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardTrackComponent implements OnInit {
   @Input() title = '';
   @Input() img = '';
-  @Input() album = '';
+  @Input() linkSong = '';
   @Input() artists = '';
   constructor() { }
 

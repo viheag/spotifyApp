@@ -21,13 +21,16 @@
     }
 
     .img__description_layer {
+        a{
+            color: $primary;
+        }
         margin: 0 10px;
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba($secondary, 0.6);
+        background: rgba($white, 1);
         border-radius: 12px;
         color: #fff;
         visibility: hidden;
