@@ -15,7 +15,8 @@ import player from 'lottie-web';
 import { DashboardBlockComponent } from './components/Template/dashboard-block/dashboard-block.component';
 import { ArtistasComponent } from './components/artistas/artistas.component';
 import { PlaylistsComponent } from './components/playlists/playlists.component';
-import { CancionesComponent } from './components/canciones/canciones.component'; 
+import { CancionesComponent } from './components/canciones/canciones.component';
+import { CardTrackComponent } from './components/Template/card-track/card-track.component'; 
 export function playerFactory() {
   return player;
 }
@@ -29,7 +30,8 @@ export function playerFactory() {
     DashboardBlockComponent,
     ArtistasComponent,
     PlaylistsComponent,
-    CancionesComponent
+    CancionesComponent,
+    CardTrackComponent
   ],
   imports: [
     BrowserModule,

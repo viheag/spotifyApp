@@ -4,5 +4,9 @@
     <li class="breadcrumb-item active" aria-current="page">Canciones</li>
   </ol>
 </nav>
-<div class="card overflow-auto">
+<div class="row">
+  <ng-container *ngFor="let item of canciones"> 
+    <app-card-track class="col-lg-4 col-md-6 col-sm-12 my-2" [title]="item.name" [img]="item.album.images[0].url"></app-card-track>
+  </ng-container>
 </div>
+

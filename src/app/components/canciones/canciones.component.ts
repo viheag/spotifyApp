@@ -7,12 +7,13 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./canciones.component.scss']
 })
 export class CancionesComponent implements OnInit {
-
+  canciones !:any[];
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
     this.authService.getToptracks().subscribe((response)=>{
-      console.log(response)
+      this.canciones=response.items;
+      console.log(this.canciones);
     },(error)=>{
       console.log("Error",error)
     })
