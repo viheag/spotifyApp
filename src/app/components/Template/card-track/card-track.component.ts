@@ -12,8 +12,7 @@ export class CardTrackComponent implements OnInit {
   @Input() artists = '';
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.img);
+  ngOnInit(): void {  
   }
 
 }

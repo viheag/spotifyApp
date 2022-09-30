@@ -6,7 +6,7 @@
 </nav>
 <div class="row">
   <ng-container *ngFor="let item of canciones"> 
-    <app-card-track class="col-lg-4 col-md-6 col-sm-12 my-2" [title]="item.name" [img]="item.album.images[0].url"></app-card-track>
+    <app-card-track class="col-lg-4 col-md-6 col-sm-12 my-2" [title]="item.name" [artists]="item.artists[0].name" [img]="item.album.images[0].url"></app-card-track>
   </ng-container>
 </div>
 
