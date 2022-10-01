@@ -17,6 +17,9 @@ import { ArtistasComponent } from './components/artistas/artistas.component';
 import { PlaylistsComponent } from './components/playlists/playlists.component';
 import { CancionesComponent } from './components/canciones/canciones.component';
 import { CardTrackComponent } from './components/Template/card-track/card-track.component'; 
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { SkeletonCardTracksComponent } from './components/Template/skeleton-card-tracks/skeleton-card-tracks.component';
+
 export function playerFactory() {
   return player;
 }
@@ -31,7 +34,8 @@ export function playerFactory() {
     ArtistasComponent,
     PlaylistsComponent,
     CancionesComponent,
-    CardTrackComponent
+    CardTrackComponent,
+    SkeletonCardTracksComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,7 @@ export function playerFactory() {
     NgbModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxSkeletonLoaderModule,
     LottieModule.forRoot({ player: playerFactory }),  
   ],
   providers: [],

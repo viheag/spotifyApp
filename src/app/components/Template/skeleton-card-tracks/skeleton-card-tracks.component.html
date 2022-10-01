@@ -1,0 +1,27 @@
+<div class="card px-2">
+  <i class="bi bi-spotify pb-1 pt-1"></i>
+  <div class="row pb-3 pt-1 d-flex justicpcafy-content-between">
+    <div class="info-box d-flex flex-column justify-content-center col-lg-8 col-md-6 col-sm-6 col-xs-6">
+      <div class="title">
+        <!--  {{title}} -->
+        <ngx-skeleton-loader count="1"></ngx-skeleton-loader>
+      </div>
+      <div class="artist">
+        <!-- {{artists}} -->
+        <ngx-skeleton-loader count="1"></ngx-skeleton-loader>
+      </div>
+    </div>
+    <div class="img col-lg-4 col-md-6 col-sm-6 col-xs-6">
+      <!-- <img src="{{img}}" class="img-album" alt="imagen del album" /> -->
+      <ngx-skeleton-loader count="1" appearance="circle" [theme]="{ 
+      width: '101px',
+      height: '101px',
+      'border-radius': '12px'
+    }">
+      </ngx-skeleton-loader>
+      <div class="img__description_layer">
+        <a target="_blank"><i class="img__description bi bi-play-fill"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
