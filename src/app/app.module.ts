@@ -19,6 +19,7 @@ import { CancionesComponent } from './components/canciones/canciones.component';
 import { CardTrackComponent } from './components/Template/card-track/card-track.component'; 
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { SkeletonCardTracksComponent } from './components/Template/skeleton-card-tracks/skeleton-card-tracks.component';
+import { CardPlaylistComponent } from './components/Template/card-playlist/card-playlist.component';
 
 export function playerFactory() {
   return player;
@@ -35,7 +36,8 @@ export function playerFactory() {
     PlaylistsComponent,
     CancionesComponent,
     CardTrackComponent,
-    SkeletonCardTracksComponent
+    SkeletonCardTracksComponent,
+    CardPlaylistComponent
   ],
   imports: [
     BrowserModule,

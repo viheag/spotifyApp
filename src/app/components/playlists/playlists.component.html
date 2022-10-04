@@ -1,1 +1,13 @@
-<p>playlists works!</p>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="javascript:void(0);" [routerLink]="'/home'">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Playlists</li>
+    </ol>
+  </nav> 
+  <div class="row">
+    <ng-container *ngFor="let item of playlists">
+        <app-card-playlist class="col-lg-3 col-md-6 col-sm-12 my-2" [title]="item.name" [linkPlaylist]="item.external_urls.spotify" [img]="item.images[0].url">
+      </app-card-playlist>
+    </ng-container>
+  </div>x
+  

@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { DataService } from 'src/app/services/data.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  currentSession: {} = this.authService.getCurrentSession();
+  currentSession:any = this.authService.getCurrentSession();
   arrayBlocks = [
     {
       title: 'Artistas',
@@ -27,10 +29,10 @@ export class HomeComponent implements OnInit {
       link: '/canciones',
     },
   ];
-  constructor(private authService: AuthService) {}
+  constructor(private dataService: DataService, private authService: AuthService) {}
   ngOnInit(): void {
     if (!this.currentSession) {
-      this.authService.getAccount().subscribe(
+      this.dataService.getAccount().subscribe(
         (response) => {
           this.authService.setCurrentSession(response);
         },
@@ -39,5 +41,6 @@ export class HomeComponent implements OnInit {
         }
       );
     }
+    console.log(this.currentSession.id)
   }
 }

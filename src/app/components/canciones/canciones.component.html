@@ -10,9 +10,10 @@
   <button class="col-lg-2 text-light btn btn-primary mx-1" (click)="cambiarInfo('long_term')">Long term</button>
 </div>
 <div class="row">
-  <ng-container *ngFor="let item of canciones"> 
+  <ng-container *ngFor="let item of canciones">
     <app-skeleton-card-tracks class="col-lg-4 col-md-6 col-sm-12 my-2" *ngIf="!existe"></app-skeleton-card-tracks>
-    <app-card-track *ngIf="existe" class="col-lg-4 col-md-6 col-sm-12 my-2" [title]="item.name" [artists]="item.artists[0].name"
-      [linkSong]="item.external_urls.spotify" [img]="item.album.images[0].url"></app-card-track>
+    <app-card-track *ngIf="existe" class="col-lg-4 col-md-6 col-sm-12 my-2" [title]="item.name"
+      [artists]="item.artists[0].name" [linkSong]="item.external_urls.spotify" [img]="item.album.images[0].url">
+    </app-card-track>
   </ng-container>
 </div>

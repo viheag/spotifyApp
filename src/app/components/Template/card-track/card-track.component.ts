@@ -12,7 +12,7 @@ export class CardTrackComponent implements OnInit {
   @Input() artists = '';
   constructor() { }
 
-  ngOnInit(): void {  
+  ngOnInit(): void {   
   }
 
 }

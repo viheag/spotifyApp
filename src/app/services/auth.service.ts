@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
-import { catchError, map, take } from 'rxjs/operators';
+import { environment } from 'src/environments/environment'; 
+
 const sesionActual = 'SesionActual';
 const authToken = 'authAccessToken';
 const authRefresh = 'authRefreshToken';
@@ -14,20 +14,7 @@ const authRefresh = 'authRefreshToken';
 })
 export class AuthService {
   localStorageService;
-  getAccount(): Observable<any> {
-    return this.http.get<any>(`${environment.urlAPI}/account`, {
-      withCredentials: true,
-    });
-  }
-
-  getToptracks(term: any): Observable<any> {
-    return this.http.get<any>(`${environment.urlAPI}/getTopTracks`, {
-      withCredentials: true,
-      params:{
-        type_term:term
-      }
-    });
-  }
+  
 
   private currentUserSubject: BehaviorSubject<any>;
   public currentSession: Observable<any>;

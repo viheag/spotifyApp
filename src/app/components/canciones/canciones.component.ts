@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { delay } from 'rxjs';
-import { AuthService } from 'src/app/services/auth.service';
+import { Component, OnInit } from '@angular/core'; 
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-canciones',
@@ -10,10 +9,10 @@ import { AuthService } from 'src/app/services/auth.service';
 export class CancionesComponent implements OnInit {
   canciones: any[]=['','','','','','','','','','','','','','','','','','','','',];
   existe: boolean = false;
-  constructor(private authService: AuthService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.authService.getToptracks('short_term').subscribe(
+    this.dataService.getToptracks('short_term').subscribe(
       (response) => {
         setTimeout(() => {
           console.log('Listo');
@@ -28,7 +27,7 @@ export class CancionesComponent implements OnInit {
   }
   cambiarInfo(term: any) {
     this.existe=false;
-    this.authService.getToptracks(term).subscribe(
+    this.dataService.getToptracks(term).subscribe(
       (response) => {
         setTimeout(() => {
           console.log('Listo');

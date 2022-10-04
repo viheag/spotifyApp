@@ -1,0 +1,45 @@
+@import "../../../../scss/variables";
+
+.card {
+    border-radius: 12px; 
+}
+
+.img {
+    width: 100%;
+
+    img {
+        width: 100%;
+        border-radius: 12px;
+        vertical-align: bottom;
+    }
+}
+
+.info-box {
+    text-align: center;
+    .title {
+        font-size: 14px;
+        color: $secondary; 
+    }
+    .badge{
+        font-size: 12px;
+        font-weight: 400;
+        color: $white !important;
+    }
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: $white;
+}
+.item{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 25px;
+    position: absolute;
+    right: 0;
+    top:0;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: none;
+}
