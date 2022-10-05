@@ -16,28 +16,32 @@
 
 .info-box {
     text-align: center;
+
     .title {
         font-size: 14px;
-        color: $secondary; 
+        color: $secondary;
     }
-    .badge{
+
+    .badge {
         font-size: 12px;
         font-weight: 400;
-        color: $white !important;
+        color: $white  !important;
     }
 }
-a{
+
+a {
     text-decoration: none;
     cursor: pointer;
     color: $white;
 }
-.item{
+
+.item {
     width: 3rem;
     height: 3rem;
     border-radius: 25px;
     position: absolute;
     right: 0;
-    top:0;
+    top: 0;
     color: white;
     text-align: center;
     font-size: 25px;

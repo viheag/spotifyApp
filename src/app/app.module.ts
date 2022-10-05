@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
  
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,8 +19,8 @@ import { CancionesComponent } from './components/canciones/canciones.component';
 import { CardTrackComponent } from './components/Template/card-track/card-track.component'; 
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { SkeletonCardTracksComponent } from './components/Template/skeleton-card-tracks/skeleton-card-tracks.component';
-import { CardPlaylistComponent } from './components/Template/card-playlist/card-playlist.component';
-
+import { CardPlaylistComponent } from './components/Template/card-playlist/card-playlist.component';  
+import { HttpRequestInterceptor } from './helpers/refresh-token.interceptor';
 export function playerFactory() {
   return player;
 }
@@ -37,7 +37,7 @@ export function playerFactory() {
     CancionesComponent,
     CardTrackComponent,
     SkeletonCardTracksComponent,
-    CardPlaylistComponent
+    CardPlaylistComponent, 
   ],
   imports: [
     BrowserModule,
@@ -48,7 +48,7 @@ export function playerFactory() {
     NgxSkeletonLoaderModule,
     LottieModule.forRoot({ player: playerFactory }),  
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

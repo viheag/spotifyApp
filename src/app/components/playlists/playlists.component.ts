@@ -8,7 +8,89 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./playlists.component.scss'],
 })
 export class PlaylistsComponent implements OnInit {
-  playlists!: any;
+  playlists:any=[
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    },
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    },
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    },
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    },
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    },
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    },
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    },
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    },
+    {
+      name:'',
+      external_urls:{
+        spotify:''
+      },
+      images:[
+       { url:''}
+      ]
+    }
+  ]
   existe: boolean = false;
   currentSession: any = this.authService.getCurrentSession();
   constructor(
@@ -19,8 +101,10 @@ export class PlaylistsComponent implements OnInit {
   ngOnInit(): void { 
     this.dataService.getPlaylists(this.currentSession.id).subscribe(
       (response) => {
-        this.playlists = response.items; 
-        console.log(this.playlists)
+        setTimeout(() => {
+          this.playlists = response.items; 
+          console.log(this.playlists)
+        }, 2000); 
       },
       (error) => {
         console.log('Error', error);
