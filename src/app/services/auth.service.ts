@@ -52,9 +52,17 @@ export class AuthService {
     });
   }
 
+  logoutBackEnd():Observable<any>{
+    return this.http.get<any>(`${environment.urlAPI}/logout`, {
+      withCredentials: true,
+    });
+  }
   //Cerrar sesión
   logout(): void {
     this.removeCurrentSession();
+    this.logoutBackEnd().subscribe((response)=>{
+      console.log(response)
+    });
     this.router.navigate(['/login']);
   }
 }

@@ -16,7 +16,9 @@
       <ngx-skeleton-loader count="1" *ngIf="!title"></ngx-skeleton-loader>
       <span *ngIf="title">{{title}}</span>
     </div>
-    <span class="circle-number badge rounded-pill text-bg-primary mt-2"><i class="bi bi-spotify"></i> <a
+
+    <ngx-skeleton-loader count="1" *ngIf="!title"></ngx-skeleton-loader> 
+    <span *ngIf="title" class="circle-number badge rounded-pill text-bg-primary mt-2"><i class="bi bi-spotify"></i> <a
         href="{{linkPlaylist}}" target="_blank"> Escuchar en
         Spotify </a></span>
   </div>
