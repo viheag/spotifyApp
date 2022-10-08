@@ -13,7 +13,6 @@ export class DataService {
       withCredentials: true,
     });
   }
-  
   getToptracks(term: any): Observable<any> {
     return this.http.get<any>(`${environment.urlAPI}/getTopTracks`, {
       withCredentials: true,
@@ -28,6 +27,17 @@ export class DataService {
       params: {
         userId: userId,
       },
+    });
+  }
+  getFollowedArtists(): Observable<any> {
+    return this.http.get<any>(`${environment.urlAPI}/getFollowedArtists`, {
+      withCredentials: true,
+    });
+  }
+  getInfoArtist(idArtist: any): Observable<any> {
+    return this.http.get<any>(`${environment.urlAPI}/getInfoArtist`, {
+      withCredentials: true,
+      params: { artist: idArtist }
     });
   }
 }

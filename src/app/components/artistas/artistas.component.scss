@@ -1,0 +1,44 @@
+@import "../../../scss/variables";
+
+.card {
+    height: 79.45vh;
+    padding: 0 1rem;
+}
+
+.breadcrumb {
+    font-size: 13px;
+
+    a {
+        color: $primary;
+    }
+}
+
+.artist-name {
+    text-decoration: none;
+
+    &:hover {
+        color: $primary;
+        cursor: pointer;
+    }
+}
+
+.mat-table {
+    color: $gray  !important;
+    font-family: 'Poppins' !important;
+    .mat-cell{
+    color: $gray !important;
+    }
+    .mat-header-cell { 
+        font-family: 'Poppins' !important;
+        font-weight: 600;
+        font-size: 16px;
+        color: $primary;
+        text-align: center;
+    }
+
+}
+
+.mat-paginator {
+    font-family: 'Poppins' !important;
+    color: $gray;
+}
