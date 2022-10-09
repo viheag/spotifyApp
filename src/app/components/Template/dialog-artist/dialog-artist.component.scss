@@ -1,0 +1,11 @@
+@import "../../../../scss/variables";
+.artista{
+    width: 100%;
+}
+.lista-genero{
+    list-style-type:square
+}
+.name-artist{
+    color:$primary;
+    text-align: center;
+}

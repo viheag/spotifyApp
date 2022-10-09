@@ -1,7 +1,21 @@
 <mat-dialog-content>
-    <pre>
-        <p>{{datosArtista | json }}</p>
-    </pre>
+  <div class="row">
+    <div class="col-sm-6 col-lg-6 col-md-6">
+      <img *ngIf="datosArtista" class="artista" src="{{datosArtista.images[0].url}}" alt="">
+    </div>
+    <div *ngIf="datosArtista" class="col-sm-6 col-lg-6 col-md-6 ">
+      <h1 class="name-artist">{{datosArtista.name}}</h1>
+      <p>
+        This artist counts with {{datosArtista.followers.total}} followers
+      </p>
+      The music genre of this artist is:
+      <ul class="lista-genero">
+        <li *ngFor="let item of datosArtista.genres">
+          {{item}}
+        </li>
+      </ul>
+    </div>
+  </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button class="btn btn-primary text-light" mat-dialog-close tabindex="-1">Cerrar</button>

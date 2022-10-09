@@ -25,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { DialogArtistComponent } from './components/Template/dialog-artist/dialog-artist.component'; 
 import {MatDialogModule } from '@angular/material/dialog';
+import { MatSortModule } from '@angular/material/sort';
 
 
 export function playerFactory() {
@@ -57,6 +58,7 @@ export function playerFactory() {
     MatTableModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatSortModule,
     LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [

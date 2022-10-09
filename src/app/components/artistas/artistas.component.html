@@ -9,7 +9,7 @@
     A continuación se muestra una lista de tus principales artistas, si quieres obtener mas información haz clic en el
     nombre del artista
   </span>
-  <table mat-table [dataSource]="dataSource">
+  <table mat-table [dataSource]="dataSource" matSort>
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Nombre Artista </th>
       <td mat-cell *matCellDef="let element"> <a  (click)="abrirDialog(element)" class="artist-name">{{element.name}}</a> </td>

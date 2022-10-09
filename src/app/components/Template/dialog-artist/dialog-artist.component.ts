@@ -12,8 +12,8 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./dialog-artist.component.scss'],
 })
 export class DialogArtistComponent {
-  idArtist: string = '';
-  datosArtista: object = {}; 
+  idArtist: any = '';
+  datosArtista!: any; 
   constructor(
     @Inject(MAT_DIALOG_DATA) private data: any,
     private dialogRef: MatDialogRef<DialogArtistComponent>,
@@ -22,7 +22,7 @@ export class DialogArtistComponent {
     if (data) {
       this.idArtist = data.idArtist;
       this.dataService.getInfoArtist(this.idArtist).subscribe((response) => {
-        this.datosArtista = response;
+        this.datosArtista = response; 
       });
     }
   }
