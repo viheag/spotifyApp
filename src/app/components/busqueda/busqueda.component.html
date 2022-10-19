@@ -1,0 +1,21 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="javascript:void(0);" [routerLink]="'/home'">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Canciones</li>
+  </ol>
+</nav>
+<div class="card overflow-auto">
+  <div class="mb-12 mt-3">
+    <input type="email" class="form-control" placeholder="Ingresa el nombre de la canción" (keyup)="busqueda($event)">
+  </div>
+  <div class="row">
+
+    <ng-container *ngFor="let item of cancionesEncontradas">
+      <app-skeleton-card-tracks class="col-lg-4 col-md-6 col-sm-12 my-2" *ngIf="!existe"></app-skeleton-card-tracks>
+      <app-card-track *ngIf="existe" class="col-lg-4 col-md-6 col-sm-12 my-2" [title]="item.name" [artists]="item.artists[0].name"
+        [linkSong]="item.external_urls.spotify" [img]="item.album.images[0].url">
+      </app-card-track>
+    </ng-container>
+
+  </div>
+</div>

@@ -40,4 +40,12 @@ export class DataService {
       params: { artist: idArtist }
     });
   }
+  search(busqueda:any): Observable<any>{
+    return this.http.get<any>(`${environment.urlAPI}/search`,{
+      withCredentials:true,
+      params:{
+        busqueda:busqueda
+      }
+    })
+  }
 }

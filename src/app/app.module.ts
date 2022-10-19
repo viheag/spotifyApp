@@ -26,6 +26,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { DialogArtistComponent } from './components/Template/dialog-artist/dialog-artist.component'; 
 import {MatDialogModule } from '@angular/material/dialog';
 import { MatSortModule } from '@angular/material/sort';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
 
 
 export function playerFactory() {
@@ -46,6 +47,7 @@ export function playerFactory() {
     SkeletonCardTracksComponent,
     CardPlaylistComponent,
     DialogArtistComponent,
+    BusquedaComponent,
     
   ],
   imports: [

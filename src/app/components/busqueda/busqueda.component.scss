@@ -1,0 +1,13 @@
+@import "../../../scss/variables";
+.card {
+    height: 79.45vh;
+    padding: 0 1rem;
+}
+
+.breadcrumb {
+    font-size: 13px;
+
+    a {
+        color: $primary;
+    }
+}

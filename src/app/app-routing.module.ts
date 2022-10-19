@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArtistasComponent } from './components/artistas/artistas.component';
+import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { CancionesComponent } from './components/canciones/canciones.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -30,6 +31,11 @@ const routes: Routes = [
   {
     path: 'playlists',
     component: PlaylistsComponent,
+    data: {animation: 'Home'}
+  },
+  {
+    path: 'busqueda',
+    component: BusquedaComponent,
     data: {animation: 'Home'}
   },
 ];
